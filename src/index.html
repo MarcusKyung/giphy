@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Giphy Search and Trending</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Search Giphy</h1>
+    <form id="gifSelection">
+      <label for="searchQuery">Search:</label>
+      <input id="searchQuery" type="text" name="searchQuery" required>
+      
+      <label for="gifLimit">Gif Count:</label>
+      <input id="gifLimit" type="number" name="gifLimit" min="1" required>
+      
+      <label for="gifRating">Rating:</label>
+      <select name="gifRating" id="gifRating" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="g" id="g">G</option>
+        <option value="pg" id="pg">PG</option>
+        <option value="pg-13" id="pg-13">PG-13</option>
+        <option value="r" id="r">R</option>
+      </select>
+      <button type="submit" class="btn-success" id="searchGiphy">Giphy Search</button>
+    </form>
+    <hr>
+    <h3>Search Results:</h3>
+    <p id="errorMessage"></p>
+    <ul id="results">
+    </ul>
+  </div>
+</body>
+</html>
