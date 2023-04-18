@@ -7,7 +7,6 @@ import GiphyService from './giphy-service';
 
 function getGif(gifSearch, gifLimit, gifRating) {
   let promise = GiphyService.getGif(gifSearch, gifLimit, gifRating);
-  
   promise.then(function(response) {
     printElements(response);
   }, function(errorMessage) {
